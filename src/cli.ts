@@ -27,10 +27,10 @@ async function run() {
       default: false
     })
     .option('--name <outputName>', 'Output file name or template for several files', {
-      default: 'spa'
+      default: 'out'
     })
     .option('--outpath <outputPath>', 'Path to save output one or more executables', {
-      default: 'exec-spa'
+      default: 'executable-outputs'
     })
     .option('--targets <targets>', 'Comma-separated list of targets')
     .action(async (rootPath, { base, spa, build, name, outpath, targets }: CliOptions) => {
