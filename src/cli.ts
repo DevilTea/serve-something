@@ -52,7 +52,7 @@ async function run() {
 
   cli.help()
 
-  cli.parse()
+  cli.parse(process.argv, { run: false })
   await cli.runMatchedCommand()
 }
 
