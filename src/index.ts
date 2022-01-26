@@ -5,6 +5,7 @@ import _rm from 'rimraf'
 import copy from 'recursive-copy'
 import fastify from 'fastify'
 import fastifyStatic from 'fastify-static'
+import fastifyCors from 'fastify-cors'
 
 import type { Options as RimrafOptions } from 'rimraf'
 import type { ServeSpaOptions, BuildExecutableOptions } from './types'
@@ -31,6 +32,10 @@ export const serve = async ({ root, prefix, spaFallback }: ServeSpaOptions) => {
     root,
     prefix,
     wildcard: false
+  })
+
+  app.register(fastifyCors, {
+    origin: true
   })
 
   if (spaFallback) app.get(`${baseUrl}**/*`, (req, reply) => {

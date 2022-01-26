@@ -23,6 +23,9 @@ async function run() {
     .option('--spa', 'Serve with "index.html" for 404 not found fallback', {
       default: false
     })
+    .option('--cors', 'Serve with CORS "Access-Control-Allow-Origin: *"', {
+      default: false
+    })
     .option('--build', 'Build executable spa app', {
       default: false
     })
