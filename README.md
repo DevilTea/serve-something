@@ -40,9 +40,10 @@ For more info, run any command with the `--help` flag:
 Options:
   --base <baseUrl>        Input the baseUrl of the served files (default: /)
   --spa                   Serve with "index.html" for 404 not found fallback (default: false)
+  --cors                  Serve with CORS "Access-Control-Allow-Origin: *" (default: false)
   --build                 Build executable spa app (default: false)
-  --name <outputName>     Output file name or template for several files (default: spa)
-  --outpath <outputPath>  Path to save output one or more executables (default: exec-spa)
+  --name <outputName>     Output file name or template for several files (default: out)
+  --outpath <outputPath>  Path to save output one or more executables (default: executable-outputs)
   --targets <targets>     Comma-separated list of targets 
   -h, --help              Display this message
 ```
